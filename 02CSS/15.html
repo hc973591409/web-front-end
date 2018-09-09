@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内联元素</title>
+    <style>
+        /* 内敛元素之间会有一定的空隙，把父类的font-size设置为0即可 */
+        .con,.con2{
+                width:500px;
+                height:300px;
+                border:1px solid #333;
+                margin:50px auto 0;
+                font-size:0;
+            }
+        .con a{
+            background: gold;
+            font-size: 20px;
+            /* 宽高由内容撑开,margin没用 */
+            /* width: 500px;
+            height: 300px; */
+            padding: 0px 20px;
+        
+        }
+        .con2{
+            text-align: center;
+            line-height: 300px;
+        }
+        .con2 a{
+            font-size: 20px;
+            background: gold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="con">
+        <a href="#">这是一个a标签这是一个a标签</a>
+        <a href="#">这是第二个a标签</a>
+        <a href="#">这是第4个a标签</a>
+        <a href="#">这是第5个a标签</a>
+        <a href="#">这是第6个a标签</a>
+        <a href="#">这是第7个a标签</a>
+    </div>
+
+    <div class="con2">
+        <a href="#">这是一个a标签</a>
+    </div>
+        
+</body>
+</html>
