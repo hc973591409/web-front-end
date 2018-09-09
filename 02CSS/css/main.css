@@ -1,0 +1,7 @@
+/* 标签选择器，一般不这么用 */
+div{
+    color:blue;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 40px
+}
