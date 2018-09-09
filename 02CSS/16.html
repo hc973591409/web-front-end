@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内联块元素</title>
+    <style>
+        .con{
+            width: 500px;
+            height: 300px;
+            border: 1px solid #333333;
+            margin: 50px auto;
+            font-size: 0px;
+        }
+        .con a{
+            background: gold;
+            width: 150px;
+            height: 50px;
+            /* 转换为内联块元素 */
+            display: inline-block;
+            margin: 10px 0;
+            padding: 5px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .con span{
+            display: inline-block;
+            background: gold;
+        }
+    
+    
+    </style>
+</head>
+<body>
+    <div class="con">
+        <a href="#">这是一个a标签</a>
+        <a href="#">这是第二个a标签</a>
+        <a href="#">这是第4个a标签</a>
+        <a href="#">这是第5个a标签</a>
+        <a href="#">这是第6个a标签</a>
+        <a href="#">这是第7个a标签</a>
+        <span>这是一个span标签</span>
+    </div>     
+</body>
+</html>
