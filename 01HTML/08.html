@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form表单</title>
+</head>
+<body>
+    <!-- action是指触发动作提交到什么网站，metod一般有get和post -->
+    <form action="http://www.baidu.com" method="get">
+    <!-- lable标签，定义表单控件的文字输入 -->
+    <p><label for="">姓名：</label><input type="text" name="name" id=""></p>
+    <p><label for="">密码：</label><input type="password" name="password" id=""></p>
+    <p><label for="">性别：</label>
+        <!-- radio定义一个单选框 几个单选框的name必须一样-->
+        <label for="M" >男</label> <input type="radio" name="gender" id="M" value="0">
+        <!-- lable的for表示点击的时候，指向对应的id -->
+        <label for="W">女</label> <input type="radio" name="gender" id="W" value="1">
+    </p>
+    <p>
+        <label for="">爱好：</label>
+        <input type="checkbox" name="singing" id="sing" value="1">
+        <label for="sing">唱歌</label>
+        <input type="checkbox" name="running" id="run" value="1">
+        <label for="run">跑步</label>
+        <input type="checkbox" name="swiming" id="swim" value="1">
+        <label for="swim">游泳</label>
+    </p>
+    <p>
+        <!-- file定义上传图片或文件资源 -->
+        <label for="">照片：</label>
+        <input type="file" name="person-img" id="">
+    </p>
+    <p>
+        <label for="">个人描述：</label>
+        <!-- 定义多行文本输入 -->
+        <textarea name="about" id="" cols="30" rows="10"> 
+        </textarea>
+    </p>
+    <p><label for="">籍贯：</label>
+        <select name="site" id="">
+            <option value="0">北京</option>
+            <option value="1">上海</option>
+            <option value="2">广州</option>
+            <option value="3">深圳</option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+    </p>
+    </form>
+</body>
+</html>
