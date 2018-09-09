@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内联块元素实现菜单 功能</title>
+    <style>
+        .list{
+            list-style: none;
+            width: 694px;
+            height: 48px;
+            border: 1px solid gold;
+            margin: 10px auto;
+            padding: 0px;
+            font-size: 0px;
+        }
+        .list li{
+            display: inline-block;
+            width: 98px;
+            height: 48px;
+            border: 1px solid gold;    
+            margin-right: -1px;
+            text-align: center;
+        }
+        .list li:hover{
+            background: gold;
+        }
+        .list a{
+            line-height: 48px;
+            font-size: 16px;
+            color: pink;
+            text-decoration: none;
+        }
+        .list a:hover{
+            color: red;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <ul class='list'>
+        <li><a href="">首页</a></li>
+        <li><a href="">公司简介</a></li>
+        <li><a href="">解决方案</a></li>
+        <li><a href="">公司新闻</a></li>
+        <li><a href="">行业动态</a></li>
+        <li><a href="">招贤纳士</a></li>
+        <li><a href="">联系我们</a></li>
+    </ul>
+</body>
+</html>
