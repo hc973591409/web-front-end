@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绝对定位</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }     
+        .con{
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000000;
+            margin: 100px auto;
+            position: relative;
+        }
+        .con div{
+            width: 200px;
+            height: 100px;
+            /* margin: 20px; */
+            background: gold;
+            text-align: center;
+            line-height: 100px;
+            font-size: 40px;
+        }
+        /* 这里加上body是为了增加权重 */
+        body .box01{
+            /* 绝对定位， 不占据文档位置，其他元素可以顶上来 */
+            position: absolute;
+            left: -50px;
+            top: -50px;
+            background: green;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div class="con">
+		<div class="box01">1</div>
+		<div class="box02">2</div>
+		<div class="box03">3</div>
+	</div>
+
+</body>
+</html>
