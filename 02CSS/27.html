@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1、特征布局：翻页（所需知识点：盒模型、内联元素）</title>
+    <style>
+        .list{
+            list-style: none;
+            font-size: 0px; 
+            width: 958px;
+            height: 40px;
+            border: 1px solid #666;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .list li{
+            display: inline-block;
+            background: gold;
+            margin: 8px 5px;
+            padding: 5px 10px;
+        }
+        .list li:hover{
+            background: red;
+        }
+        .list a{
+            text-decoration: none;
+            font: 12px "Mircosoft Yahei";
+            color: black;           
+        }
+        .list a:hover{
+            color: #fff;
+        }
+    
+    </style>
+</head>
+<body>
+    <ul class='list'>
+        <li><a href="">上一页</a></li>
+        <li><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <span><a href="">...</a></span>
+        <li><a href="">17</a></li>
+        <li><a href="">18</a></li>
+        <li><a href="">19</a></li>
+        <li><a href="">20</a></li>
+        <li><a href="">下一页</a></li>
+    </ul>
+    
+</body>
+</html>
