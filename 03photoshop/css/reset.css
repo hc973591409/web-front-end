@@ -1,0 +1,8 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/* 去掉IE下，图片作为链接的产生的边框 */
+image{
+    border: none;
+}

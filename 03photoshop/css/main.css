@@ -1,0 +1,115 @@
+.box1{
+    width: 100%;
+    height: 133px;
+}
+.box1 img{
+    width: 200px;
+    margin-left: 284px;
+    margin-top: 30px;
+}
+
+
+.box2{
+    height: 480px;
+    background: #518e17;
+    position: relative;
+}
+.box2 .img_car{
+    margin-left: 284px;
+    margin-top: 85px;
+    width: 400px;
+}
+.box2 p{
+    position: absolute;
+    left: 800px;
+    top: 70px;
+    width: 30px;
+    height: 300px;
+    text-align: center;
+    font:bold 30px/36px "Mircosoft Yahei";
+    color:white;
+    margin: 0;
+}
+.in_type{
+    position: absolute;
+    left: 860px;
+    top: 60px;
+    height: 367px;
+    width: 365px;
+    float: left;
+    background: white;
+}
+.in_type .login_name{
+    float: left;
+    margin-left: 90px;
+    margin-top: 20px;
+    font:bold 30px/50px "Microsoft Yahei";
+    color:#a8a8a8;
+}
+.in_type .login_ret{
+    background: url(../images/index-logo.png) 0px -8px no-repeat;
+    float: left;
+    margin-left: 30px;
+    margin-top: 40px;
+    color: #47aa34;
+    margin: 36px 0 0 36px;
+}
+.box2 .myform{
+    float: left;
+    width: 307px;
+    height: 265px;
+    margin-left: 35px;
+    border-top: 1px solid #a8a8a8;
+}
+.myform .name_info,.pwd_info{
+    margin-top: 20px;
+    width: 300px;
+    height: 30px;
+    /* 覆盖原来的边框设置 */
+    border: 1px solid #e0e0e0;
+    /* 设置没有外边框 */
+    outline: none;
+
+    background: url("../images/index-logo.png") 258px -100px no-repeat #f8f8f8;
+}
+.pwd_info{
+    background: url("../images/index-logo.png") 258px -207px no-repeat #f8f8f8;
+}
+.myform .rember
+{
+    margin-top: 20px;
+    width: 307px;
+}
+.rember ch_box
+{
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.rember .ch_label
+{
+    float: left;
+    margin-left: 10px;
+    font: 14px/20px "Mircosoft Yahei";
+    color: #666666;
+}
+.rember a{
+    text-decoration: none;
+    font: 14px/20px "Mircosoft Yahei";
+    color: #666666;
+    float:right;
+}
+.myform .sub_mit
+{
+    width: 100%;
+    height: 50px;
+    border: none;
+    margin-top: 60px;
+    background: #47aa34;
+    font: 24px/50px "Mircosoft Yahei";
+    color: #fff;
+}
+
+.box3{
+    height: 150px;
+}
