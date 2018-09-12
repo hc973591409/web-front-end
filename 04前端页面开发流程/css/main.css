@@ -1,0 +1,418 @@
+.login_header,.login_form_con,.foot{
+    width: 953px;
+    height: 133px;
+    margin: 0 auto;
+}
+.login_header a{
+    display: block;
+    width: 193px;
+    height: 76px;
+    margin-top: 28px;
+}
+
+.login_con{
+    width: 100%;
+    height: 480px;
+    background: #518e17;  
+}
+.login_form_con
+{
+    height: 480px;
+}
+.login_form_con img{
+    margin-top: 89px;
+}
+.login_form_con p{
+    width: 30px;
+    font:bold 30px/36px "Mircosoft Yahei";
+    text-align: center;
+    color: #fff;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+.login_form_con .form_input_con{
+    width: 368px;
+    height: 378px;
+    background: #fff;
+    border: 1px solid #c6c6c5;
+    margin-top: 50px;
+    border-radius: 1%
+}
+.form_head{
+    width: 308px;
+    height: 70px;
+    color: #666;
+    border-bottom: 1px solid #c0c0c0;
+    margin: 0 auto;
+}
+.form_head h1{
+    height: 70px;
+    font:bold 24px/70px "Mircosoft Yahei";
+    color: #a8a8a8;
+
+    margin-left: 44px;
+}
+.form_head a{
+    margin: 30px 0 0 50px;
+    height: 16px;
+    width: 100px;
+    float: left;
+    font: 16px/16px "Mircosoft Yahei";
+    text-indent: 25px;
+    color: #5fb42a;
+    background: url(../images/icons.png) 0px -550px no-repeat;
+}
+
+.input_con{
+    width: 306px;
+    height: 300px;
+    color: #666;
+    /* border: 1px solid #c0c0c0; */
+    margin: 0 auto;
+}
+
+.input_name,.input_pwd{
+    width: 306px;
+    height: 38px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    background: url(../images/icons.png) 275px -592px no-repeat #f8f8f8;
+    margin-top: 20px;
+    text-indent: 10px;
+}
+.input_pwd{
+    margin-top: 35px;
+    background: url(../images/icons.png) 275px -649px no-repeat #f8f8f8;
+}
+
+.rember_name
+{
+    margin-top: 35px;
+}
+.input_con a{
+    margin-top: 32px;
+    float: right;
+} 
+.input_con label{
+    margin-top: 32px;
+    float: left;
+    margin-left: 10px;
+}
+.input_submit
+{
+    width: 308px;
+    height: 40px;
+    background-color: #47aa34;
+    border: 0px;
+    font: 24px/40px 'Microsoft Yahei';
+    color: #fff;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.foot .link,.foot .copy_right,.foot .last_one{
+    display: block;
+    width: 100%;
+    margin: 15px auto;
+    text-align: center;
+}
+.foot .link{
+    margin-top: 40px;
+    /* display: block; */
+}
+.link a,.link span{
+    color: #666;
+    float: center;
+    margin: 0 10px;
+}
+
+
+
+.index_header_con{
+    height: 29px;
+    width: 100%;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+}
+
+.index_header{
+    height: 29px;
+    width: 1200px;
+    margin: 0 auto;
+
+}
+.index_header .welcome{
+    /* border: 1px solid #000; */
+    float: left;
+    font: 12px/29px "Mircosoft Yahei";
+}
+.index_header .login_no{
+    font: 12px/29px "Mircosoft Yahei";
+    
+}
+.index_header .login_in{
+    display: none;
+    font: 12px/29px "Mircosoft Yahei";
+}
+.login_no span{
+    margin: 0 20px;
+}
+.login_in span{
+    margin: 0 20px;
+}
+
+
+.logo_icon{
+    width: 1200px;
+    height: 115px;
+    margin: 0 auto;
+}
+.logo{
+    margin-top: 33px;
+}
+.seach_text{
+    border: 1px solid #47aa34;
+    border-right: none;
+    width: 470px;
+    height: 38px;
+    outline: none;
+    margin:40px 0 0 150px;
+    text-indent: 30px;
+    background: url(../images/icons.png) 5px 10px no-repeat;
+}
+.seach_btn{
+    width: 100px;
+    height: 40px;
+    background-color: #47aa34;
+    border: 0px;
+    font: 14px/38px 'Microsoft Yahei';
+    margin-top: 40px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.shoping_car{
+    margin-top: 40px;
+    height: 38px;
+    width: 200px;
+    background:#f8f8f8;
+    border: 1px solid #a8a8a8
+}
+.shoping_car div{
+    float: left;
+    width: 150px;
+    font: 16px/38px "Mircosoft Yahei";
+    color: #47aa34;
+    text-indent: 55px;
+    background: url(../images/icons.png) 15px -43px no-repeat;
+}
+.shoping_car span{
+    float: left;
+    width: 50px;
+    height: 39px;
+    text-align: center;
+    font:bold 16px/38px "Mircosoft Yahei";
+    color:#fff;
+    background: goldenrod;
+}
+.index_header_sort{
+    height: 40px;
+    border-bottom: 2px solid  #47aa34;
+}
+.goods_sort{
+    width: 1200px;
+    height: 40px;
+    margin: 0 auto;
+}
+.all_goods_sort{
+    height: 40px;
+    width: 200px;
+    font: 14px/40px "Mircosoft Yahei";
+    color: #fff;
+    text-align: center;
+    background: #47aa34;
+}
+
+.day_header
+{
+    font: 14px/40px  "Mircosoft Yahei";
+    margin-left: 20px;
+}
+
+.center_con
+{
+    width: 1200px;
+    height: 270px;
+    margin: 0px auto;
+}
+.center_con .goods_list{
+    height: 270px;
+    width: 200px;
+}
+.goods_list li{
+    width: 198px;
+    height: 44px;
+    border: 1px solid #eee;
+    text-indent: 71px;
+    margin-top: -1px;
+}
+.goods_list a{
+    font: 14px/44px "Mirosoft Yahei";
+    color: #333;
+}
+.goods_list li:nth-child(1)
+{
+    background: url(../images/icons.png) 24px -92px no-repeat;
+}
+.goods_list li:nth-child(2)
+{
+    background: url(../images/icons.png) 24px -142px no-repeat;
+}
+.goods_list li:nth-child(3)
+{
+    background: url(../images/icons.png) 24px -192px no-repeat;
+}
+.goods_list li:nth-child(4)
+{
+    background: url(../images/icons.png) 24px -242px no-repeat;
+}
+.goods_list li:nth-child(5)
+{
+    background: url(../images/icons.png) 24px -292px no-repeat;
+}
+.goods_list li:nth-child(6)
+{
+    background: url(../images/icons.png) 24px -342px no-repeat;
+}
+
+.center_con .ppt
+{
+    position: relative;
+    width: 760px;
+    height: 270px;
+}
+.ppt a{
+    position: absolute;
+}
+.ppt .prev{
+    position: absolute;
+    left: 12px;
+    top: 148px;
+    width: 20px;
+    height: 25px;
+    /* background: red; */
+    cursor: pointer;
+    background: url(../images/icons.png) 0px -450px no-repeat;
+}
+.ppt .next{
+    position: absolute;
+    right: 12px;
+    top: 148px;
+    width: 20px;
+    height: 25px;
+    cursor: pointer;
+    /* background: red; */
+    background: url(../images/icons.png) 0px -500px no-repeat;
+}
+
+.slider{
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    bottom: 9px;
+    font-size: 0px;
+    text-align: center;
+    padding: 0 auto;
+}
+.slider li{
+    display: inline-block;
+    width: 15px;
+    height: 15px; 
+    background:#ddd;
+    border-radius: 50%;
+    margin: 0px 10px;
+}
+.slider .active{
+    background:#666;
+}
+.img_b{
+    margin-top: -3px;
+}
+
+.commen_model{
+    width: 1200px;
+    height: 340px;
+    margin: 18px auto;
+}
+.commen_model .commen_title{
+    height: 38px;
+    border-bottom:2px solid #42ad46;
+}
+.commen_title h3{
+    float: left;
+    font:bold 16px/38px "Mircosoft Yahei";
+    color: #37ab40;
+}
+.commen_title ul{
+    margin-bottom: 5px;
+}
+.commen_title li{
+    float: left;
+    display: inline-block;
+    margin: 12px 0 0 20px;
+}
+.commen_title li:nth-child(5)
+{
+    float: right;
+}
+.img_box{
+    width: 200px;
+    height: 300px;
+}
+.goods_list_img{
+    float: left;
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+}
+.goods_list_img li{
+    float: left;
+    width: 249px;
+    height: 299px;
+    border-right: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    
+}
+.goods_list_img li:hover{
+    width:248px;
+	height:298px;
+	border:1px solid #ff0;
+}
+
+.goods_list_img h3{
+    width: 100%;
+    height: 52px;
+    font:bold 14px/52px "Mircosoft Yahei";
+    text-align: center;
+    color: #666;
+}
+
+.goods_list_img a{
+    display: block;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.goods_list_img span{
+    display: block;
+    height: 52px;
+    font: bold 20px/52px 'Microsoft Yahei';
+    color: #c40000;
+    text-align: center;
+}
+hr{
+    margin-top: 40px;
+    border:1px solid #37ab40
+}
