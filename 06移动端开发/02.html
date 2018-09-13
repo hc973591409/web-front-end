@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>弹性盒布局</title>
+    <style>     
+    
+        .con{
+            width: 960px;
+            height: 80px;
+            background: #dddddd;
+            margin: 20px auto;
+            /* 声明弹性盒模型布局 */
+            display: flex;
+        }
+        .logo{
+            width: 80px;
+            height: 80px;
+            background: gold;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            /* 设置ul自动增长覆盖父类宽带 */
+            flex-grow: 1;
+
+            display: flex;
+            /* justify-content: space-between; */
+        }
+        ul li{
+            border-right: 1px solid #000;
+            font-size: 20px;
+            align-self: center;
+            flex-grow: 1;
+            color: #666666;
+            text-align: center;
+        }
+        ul li:last-child{
+            border-right: 0px;
+        }
+        @media (max-width:960px){
+            .con{
+                width: 100%;
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="logo">
+        </div>
+        <ul>
+            <li>首页</li>
+            <li>公司新闻</li>
+            <li>行业动态</li>
+            <li>联系我们</li>
+            <li>也没啥用</li>
+        </ul>
+
+    </div>
+</body>
+</html>
