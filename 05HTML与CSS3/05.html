@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动画透明度rgba实现文字遮罩</title>
+    <style>
+        .con{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 50px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .con img{
+            width: 200px;
+            height: 200px;
+        }
+        .con div{
+            position:absolute;
+            top: 200px;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            font: 20px/30px "Mircosoft Yahei";
+            background: rgba(0, 0, 0, 0.5);
+            transition: all 500ms ease;
+        }
+
+        .con:hover div{
+            top: 100px;
+        }
+        .con p{
+            margin: 5px 5px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="con">
+        <img src="./location_bg.jpg" alt="">
+        <div><p>图片说明图片说明图片说明图片说明图片说明图片说明</p></div>
+    </div>
+</body>
+</html>
