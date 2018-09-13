@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片翻面效果</title>
+    <style>
+        .con{
+            width: 300px;
+            height: 272px;
+            margin: 50px auto;
+            position: relative;
+        }
+        .con .pic{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 300px;
+            height: 272px;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            transform: perspective(800px) rotateY(0deg);
+            transition: all 500ms ease;
+        }
+        .con .info{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 300px;
+            height: 272px;
+            background: gold;
+            font: 20px/272px "Mircosoft Yahei";
+            backface-visibility: hidden;
+            text-align: center;
+            transform-style: preserve-3d;
+            transform: perspective(800px) rotateY(180deg);
+            transition: all 500ms ease;
+        }
+        .con:hover .info{
+            transform: perspective(800px) rotateY(0deg);
+        }
+        .con:hover .pic{
+            transform: perspective(800px) rotateY(180deg);
+        }
+
+
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="con">
+        <div class="pic"><img src="./location_bg.jpg" alt=""> </div>
+        <div class="info">这是一个文字说明</div>
+    </div>
+</body>
+</html>
