@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport 视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>流体布局</title>
+    <style>
+        body,ul{
+            margin:0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            border: 1px solid pink;
+        }
+        li{
+            float: left;
+            width: 23%;
+            height: 200px;
+            background: gold;
+            margin: 30px 1%;
+
+        }
+        @media (max-width:900px){
+            li{
+            width: 29%;
+            margin: 30px 2%;
+            }
+        }
+        @media (max-width:800px){
+            li{
+            width: 46%;
+            margin: 30px 2%;
+            }
+        }
+        @media (max-width:500px){
+            li{
+            width: 92%;
+            margin: 30px 4%;
+            }
+        }
+        .clearfix:after,.clearfix:before{
+            display: table;
+            content: "";
+        }
+        .clearfix:after{
+            clear: both;
+        }
+        .clearfix{
+            zoom: 1;
+        }
+    </style>
+</head>
+<body>
+    <ul class="clearfix">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
