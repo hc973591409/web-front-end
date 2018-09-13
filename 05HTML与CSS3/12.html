@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>loading-动画</title>
+    <style>
+        .con{
+            width:300px;
+            height: 130px;
+            margin: 300px auto;
+            border: 1px solid #000;
+        }
+        .con p{
+            width: 300px;
+            height: 30px;
+            margin: 0px;
+            padding: 0;
+            font: 15px/30px "Mircosoft Yahei";
+            float: left;
+            text-align: center;
+        }
+        .con div{
+            width: 30px;
+            height: 70px;
+            margin: 15px;
+            float: left;
+        }
+        .con div:nth-child(1)
+        {
+            background: gold;
+            animation: loading 500ms ease 0ms infinite  alternate both;
+            border-radius: 5%;
+        }
+        .con div:nth-child(2)
+        {
+            background: green;
+            animation: loading 500ms ease 100ms infinite alternate  both;
+            border-radius: 5%;
+        }
+        .con div:nth-child(3)
+        {
+            background: red;
+            animation: loading 500ms ease 200ms infinite  alternate both;
+            border-radius: 5%;
+        }
+        .con div:nth-child(4)
+        {
+            background: rebeccapurple;
+            animation: loading 500ms ease 300ms infinite alternate  both;
+            border-radius: 5%;
+        }
+        .con div:nth-child(5)
+        {
+            background: yellowgreen;
+            animation: loading 500ms ease 400ms infinite  alternate both;
+            border-radius: 5%;
+        }
+        @keyframes loading{
+            from{
+                transform: scaleY(1); 
+            }
+            to{
+                transform: scaleY(0.5);
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <p>loading</p>
+    </div>
+</body>
+</html>
