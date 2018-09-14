@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js实现换肤第二弹</title>
+    <link rel="stylesheet" href="1.css" id="link1">
+    <script>
+        function skin1(){
+            var oLink1 = document.getElementById('link1');
+            oLink1.href = '1.css';
+        }
+
+        function skin2(){
+            var oLink1 = document.getElementById('link1');
+            oLink1.href = '2.css';
+        }
+
+        window.onload=function(){
+            var oBtn1 = document.getElementById("btn1");
+            var oBtn2 = document.getElementById("btn2");
+            // 提取行间事件，等于函数，不能写括号，否则会直接执行
+            oBtn1.onclick = skin1;
+            oBtn2.onclick = skin2;
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="皮肤1" id='btn1'>
+    <input type="button" value="皮肤2" id='btn2'>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+
+</html>
