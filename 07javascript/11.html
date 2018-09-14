@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>全功能计算器</title>
+    <style>
+        .list{
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-content: space-around;
+        }
+        li{
+
+            list-style: none;
+            height: 60px;
+            margin: 10px auto 5px;
+            flex-grow: 1;
+            display: flex;
+        }
+        li input{
+            width: 90%;
+            height: 100%;
+        }
+        li select{
+            width: 40%;
+            height: 80%;
+            margin-left: 30%;
+            text-align: center;
+            align-self: center;
+        }
+
+
+    </style>
+
+    <script>
+        window.onload = function(){
+            var oSelect = document.getElementById('select1');
+            var oInput1 = document.getElementById('input1');
+            var oInput2 = document.getElementById('input2');
+            var oDiv = document.getElementById('div1');
+            var oSpan = document.getElementById('span1');
+            var oBtn = document.getElementById('btn');
+
+            oBtn.onclick = function(){
+                // isNaN  is not a number,不是数字的时候，就直接return
+                if (isNaN(oInput1.value) || isNaN(oInput2.value)){
+                    alert("请输入正确的数字");
+                    return;
+                }
+                var op = oSelect.value;
+                switch (op) {
+                    case '+':
+                        oDiv.innerHTML='计算完成';
+                        oSpan.innerHTML = add(oInput1.value,oInput2.value);
+                        break;
+
+                    case '-':
+                        oDiv.innerHTML='计算完成';
+                        oSpan.innerHTML = sum(oInput1.value,oInput2.value);
+                        break;
+
+                    case '*':
+                        oDiv.innerHTML='计算完成';
+                        oSpan.innerHTML = mul(oInput1.value,oInput2.value);
+                        break;
+
+                    case '/':
+                        oDiv.innerHTML='计算完成';
+                        oSpan.innerHTML = divv(oInput1.value,oInput2.value);
+                        break;
+
+                    case '%':
+                        oDiv.innerHTML='计算完成';
+                        oSpan.innerHTML = mod(oInput1.value,oInput2.value);
+                        break;
+                
+                    default:
+                        break;
+                }
+
+            }
+
+
+            function add(a,b){
+                // 防止浮点类型的不精确
+                return (parseFloat(a)*100+parseFloat(b)*100)/100;
+            }
+
+            function sum(a,b){
+                return (parseFloat(a)*100-parseFloat(b)*100)/100;
+            }
+
+            function mul(a,b){
+                return (parseFloat(a)*100*parseFloat(b)*100)/10000;
+            }
+
+            function divv(a,b){
+                return (parseFloat(a)*100)/(parseFloat(b)*100);
+            }
+
+            function mod(a,b){
+                return ((parseFloat(a)*100) % (parseFloat(b)*100))/100;
+            }
+
+        }
+    
+    </script>
+</head>
+<body>
+    <div class="list">
+        <li><input type="text" name="" style='font-size: 28px' id="input1"></li>
+        <li>
+            <select name="" id="select1" style='font-size: 28px'>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+        </li>
+        <li><input type="text" name="" style='font-size: 28px' id="input2"></li>
+        <li><input type="button" style='font-size: 28px' value="计算" id= 'btn'></li>
+    </div>
+    <br />
+    <div id='div1' style='font-size: 28px'>计算。。。</div>
+    <span id='span1' style='font-size: 28px'></span>
+</body>
+</html>
