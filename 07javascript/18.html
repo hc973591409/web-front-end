@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>面向对象--单体模式</title>
+    <script>
+        // 单体模式，全部为键值对的方式创建
+        var tom={
+            name:'tom',
+            age:19,
+            showname:function(){
+                alert(this.name);
+            },
+            showage:function(){
+                alert(this.age);
+            }
+        };
+        tom.showage();
+        tom.showname();
+    </script>
+</head>
+<body>
+    <div>123</div>
+</body>
+</html>
