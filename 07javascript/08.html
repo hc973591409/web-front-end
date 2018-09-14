@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for循环设置背景色-第二种获取元素的方法</title>
+    <script>
+        window.onload = function(){
+            // 先获取通过id选择元素，在通过标签选择id下的子元素
+            var oList1 = document.getElementById('list1');
+            // 通过标签获取，这里ali是选择集，是一种类数组对象，但是不能增删等方法
+            var aLi = oList1.getElementsByTagName('li');
+
+            for(var i=0;i<aLi.length;i++){
+                if(i%2==0){
+                    // 偶数行设置为红色
+                    aLi[i].style.background='red';
+                }
+                // 奇数行设置为gold
+                else{
+                    aLi[i].style.background='gold';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="list1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+    <ul id='list2'>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+    </ul>
+</body>
+</html>
