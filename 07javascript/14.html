@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>倒计时</title>
+    <script>
+        window.onload = function (){
+            var oDiv = document.getElementById('div1');
+
+            function show_time(){
+                var fulture = new Date(2018,8,14,15,36,0);
+                var now = new Date();
+                // fulture-now获得毫秒数
+                var lefts = (fulture-now)/1000;
+                var day = parseInt(lefts/86400) ;
+                var hour = parseInt((lefts%86400)/(60*60))
+                //                      刨除天数   刨除小时数
+                var minute = parseInt((lefts%86400)%(60*60)/60);
+                // alert(minute)
+                var second = parseInt(lefts%60);
+                var string = '倒计时'+day+'天'+hour+'小时'+minute+'分'+second+'秒';
+                oDiv.innerHTML = string;
+                // 计数结束，重定向想到新的页面
+                if(lefts <= 0){
+                    window.location.href='http://www.baidu.com';
+                }
+            }
+            show_time()
+            setInterval(show_time, 1000);
+        }
+    
+    </script>
+</head>
+<body>
+        <div id='div1' style="font-size:30px"></div>
+</body>
+</html>
