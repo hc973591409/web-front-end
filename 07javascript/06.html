@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计算器的实现</title>
+    <script>
+        window.onload = function(){
+            var oInput01 = document.getElementById('input01');
+            var oInput02 = document.getElementById('input02');
+            var oBtn = document.getElementById('btn');
+            var oSpan = document.getElementById('span1');
+            var oDiv = document.getElementById('cal');
+            // 定义一个匿名函数等于btn的点击事件
+            oBtn.onclick = function(){
+                var c = add(oInput01.value,oInput02.value);
+                // 改变里面的文字
+                oSpan.innerHTML = c;
+                oDiv.innerHTML = '计算完成';
+            }
+            function add(a,b){
+                // parseInt类型转换函数
+                return  parseInt(a) + parseInt(b);        
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="input01">
+    <input type="text" name="" id="input02">
+    <input type="button" value="相加" id="btn">
+    <div id='cal'>计算...</div>
+    <span id='span1'></span>
+    
+</body>
+</html>
