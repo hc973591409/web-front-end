@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>面向对象---原型模式</title>
+
+    <script>
+        // 原型模式的属性和其他方式一样的
+        function Person(name, age, job){
+            this.name=name;
+            this.age=age;
+            this.job=job;}
+            
+            // 原型模式创建的方法是共享的
+            Person.prototype.showname = function(){
+                alert(this.name)
+            };
+
+            Person.prototype.showjob = function(){
+                alert(this.job)
+            };
+
+        tom = new Person('tom', 18, 'Python')
+        tom.showname();
+        tom.showjob()
+        // 以上几种方法，当有几个对象的时候，方法是不共享的，所以会浪费内存
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
