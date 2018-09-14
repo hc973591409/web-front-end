@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据去重</title>
+    <script>
+        window.onload = function(){
+            var aList = [11,22,33,44,11,22,33,44,55,22,99,0];
+            // 对alist去重复
+            // 定义一个新数组，接受去重以后的数组
+            var alist1 = [];
+            for(var i=0;i<aList.length;i++){
+                // 非重复元素出现的第一次索引值应该等于当前索引，不是的都是重复的
+                if(aList.indexOf(aList[i]) == i){
+                    alist1.push(aList[i]);
+                }
+            }
+            var oDiv = document.getElementById('div1');
+            // 用—链接数组元素
+            oDiv.innerHTML = alist1.join('-')
+        }
+    </script>
+</head>
+<body>
+    <div id="div1"></div>
+</body>
+</html>
