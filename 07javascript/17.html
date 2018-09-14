@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>面试题--闭包作为选项卡</title>
+    <style>
+        input{
+            height: 50px;
+            width: 100px;
+            font-size: 25px;
+            border: 0;
+            background: #ddd;
+        }
+        .cur{
+            background: gold;
+        }
+        .contents div{
+            height: 500px;
+            width: 500px;
+            background: gold;
+            font-size: 30px;
+            line-height: 500px;
+            text-align: center;
+            display: none;
+        }
+        div.active{
+            display: block;
+        }
+        
+    </style>
+
+    <script>
+        window.onload = function(){
+            var oBtns = document.getElementById('btns').getElementsByTagName('input');
+            var oDivs = document.getElementById('contents').getElementsByTagName('div');
+            for(var i=0;i<oBtns.length;i++){
+                // 利用闭包保存索引
+                (function (j) {
+                    oBtns[j].onclick = function () {
+                        for(var k=0;k<oDivs.length;k++){
+                            // 清除样式
+                            oBtns[k].className='';
+                            oDivs[k].className='';
+                        }
+                        oBtns[j].className='cur';
+                        oDivs[j].className='active';
+                    }
+                })(i);
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id='btns'>
+        <input type="button" value="按钮1" class="cur">
+        <input type="button" value="按钮2" >
+        <input type="button" value="按钮3" >
+    </div>
+
+    <div id='contents' class="contents">
+        <div class="active">文字选项1</div>
+        <div>文字选项2</div>
+        <div>文字选项3</div>
+    </div>
+
+    
+</body>
+</html>
