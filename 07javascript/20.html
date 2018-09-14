@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>构造函数模式</title>
+    <script>
+        function Person(name, age, job){
+            this.name=name;
+            this.age=age;
+            this.job=job;
+            this.showname=function(){
+                alert(this.name)
+            };
+            this.showjob=function(){
+                alert(this.job)
+            };
+        }
+        tom = new Person('tom', 18, 'Python')
+        tom.showname();
+        tom.showjob()
+        // 以上几种方法，当有几个对象的时候，方法是不共享的，所以会浪费内存
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
