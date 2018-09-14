@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>更改class事件</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background: gold;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oDiv1 = document.getElementById('div1');
+            oDiv1.className = 'box2';
+
+            var oDiv2 = document.getElementById('div2');
+            var attr = 'color';
+            // [] 变量作为属性的写法，里面只能师字符出啊
+            // oDiv2.style[attr] = 'blue';
+            // 第二种写法 
+            oDiv2['style'][attr] = 'cyan';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="box1" id='div1'></div>
+
+    <div id='div2'>这是一个div元素</div>
+</body>
+
+</html>
