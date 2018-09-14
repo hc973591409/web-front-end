@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>时钟</title>
+    <script>
+        window.onload = function(){
+            var oDiv = document.getElementById('div1');
+
+            function show_time(){
+                var now = new Date();
+                var year = now.getFullYear();
+                var month = now.getMonth()+1;
+                var week = now.getDay();
+                var day = now.getDate()
+                var hour = now.getHours();
+                var minute = now.getMinutes();
+                var second = now.getSeconds();
+                // alert(to_week(week));
+                var string = "北京时间："+year+'年'+to_doble(month)+'月'+to_doble(day)+'日'+" 星期"+to_week(week) +'  '+to_doble(hour)+':'+to_doble(minute)+":"+to_doble(second);
+                oDiv.innerHTML = string;
+            }
+            // 多执行一次，防止中间有1s的空白
+            show_time();
+            timer = setInterval(show_time,1000);
+        }
+        function to_doble(num) {
+            if(parseInt(num)<10){
+                return '0' + num;
+            }
+            return num;
+        }
+        function to_week(num) {
+            // alert(num)
+            num = parseInt(num)
+            switch (num) {
+                case 0:
+                    return '日';
+                    break;
+                case 1:
+                    return '一';
+                    break;
+                case 2:
+                    return '二';
+                    break;
+                case 3:
+                    return '三';
+                    break;
+                case 4:
+                    return '四';
+                    break;
+                case 5:
+                    return '五';
+                    break;
+                case 6:
+                    return '六';
+                    break;
+            
+                default:
+                    break;
+            }
+        }
+    
+    
+    </script>
+</head>
+<body>
+    <div id='div1' style="font-size:30px"></div>
+</body>
+</html>
