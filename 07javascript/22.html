@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>面向对象--继承</title>
+    <script>
+        function Person(name, age, job){
+            this.name=name;
+            this.age=age;
+            this.job=job;
+            }
+        // 原型模式创建的方法是共享的
+        Person.prototype.showname = function(){
+            alert(this.name);
+        };
+
+        Person.prototype.showjob = function(){
+            alert(this.job);
+        };
+        function BlackPerson(name, age, job, skin){
+            // 属性由call/apply继承,作用是可以改变this指针的指向
+            Person.call(this, name, age, job);
+            this.skin = skin;
+        }
+        // 属性得新建一个父类的实例对象
+        BlackPerson.prototype = new Person();
+
+        BlackPerson.prototype.showskin = function(){
+            alert(this.skin)
+        }
+
+        // 可以改写父类的方法
+  
+
+        tom = new BlackPerson('tom',19,'worker','black');
+        tom.showname();
+        tom.showskin = function(){
+            alert("我的皮肤是"+this.skin+'色');
+        }
+        tom.showskin();
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
