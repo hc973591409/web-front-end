@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定时器弹框</title>
+    <style>
+        .con{
+            width: 500px;
+            height: 400px;
+            text-align: center;
+            line-height: 400px;
+            font-size: 30px;
+            border: 2px solid #ddd;
+            /* 固定定位 */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            background: cadetblue;
+            margin-left: -250px;
+            margin-top: -200px;
+            /* 设置为置于顶层，权重值越高，层级越高 */
+            z-index: 9999;
+            display: none;
+        }
+        .mask{
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 0, 0);
+            opacity: 0.3;
+            filter: alpha(opacity=30);
+            z-index: 9990;
+        }
+    
+    
+    </style>
+    <script>
+        window.onload = function(){
+            var oTips = document.getElementById('con1')
+            function showcon(){
+                oTips.style.display='block';
+            }
+            setTimeout(showcon, 5000);
+        }
+
+    </script>
+</head>
+<body>
+    <div style="font-size:30px">定时器弹框程序</div>
+    <div class="con" id="con1">
+        提示信息
+    </div>
+    <div class="mask" id='mask1'></div>
+</body>
+</html>
