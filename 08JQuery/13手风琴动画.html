@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手风琴动画</title>
+    <style>
+        ul{
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+            width: 727px;
+            height: 350px;
+            background: gold;
+            overflow: hidden;
+            position: relative;
+        }
+        li{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+        }
+        li span{
+            float: left;
+            width: 20px;
+            height: 100%;
+            text-align: center;
+            font: 15px/30px 'Monaco';
+            background: teal;
+            cursor: pointer;
+            border-right: 1px solid #fff;
+        }
+        li img{
+            float: left;
+        }
+        ul li:nth-child(1){
+            left: 0;
+            top: 0;
+        }
+        ul li:nth-child(2){
+            left: 643px;
+            top: 0px;
+        }
+        ul li:nth-child(3){
+            left: 664px;
+            top: 0px;
+        }
+        ul li:nth-child(4){
+            left: 685px;
+            top: 0px;
+        }
+        ul li:nth-child(5){
+            left:706px;
+            top: 0px;
+        }
+        
+    
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+
+        $(function () {
+            $('ul li').click(function() {
+                $(this).animate({left:$(this).index()*21});
+                $(this).prevAll().each(function () {
+                    $(this).animate({left:($(this).index())*21});
+                })
+                $(this).nextAll().each(function(){
+                    $(this).animate({left:622+$(this).index()*21});
+                })
+            });
+        })
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li><span>非洲风景图1</span><img src="./images/001.jpg" alt=""></li>
+        <li><span>非洲风景图2</span><img src="./images/002.jpg" alt=""></li>
+        <li><span>非洲风景图3</span><img src="./images/003.jpg" alt=""></li>
+        <li><span>非洲风景图4</span><img src="./images/004.jpg" alt=""></li>
+        <li><span>非洲风景图5</span><img src="./images/005.jpg" alt=""></li>
+    </ul>
+</body>
+</html>

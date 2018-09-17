@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery选择器</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+    $(function(){
+        // id选择器，和样式的写法一样
+        $('#div1').css({fontSize:'30px'});
+        // 可以一行写多个，逗号分隔即可 类选择器
+        $('.div2').css({color:'pink',fontSize:'30px'})
+        // 层级选择器
+        $('.list li').css({height:'30px', fontSize:'20px', background:'green', 
+        marginBottom:'10px', color:'#fff'});
+    });
+
+    </script>
+</head>
+<body>
+    <div id="div1">
+        这是第一个div元素
+    </div>
+    <div class="div2">
+            这是第二个div元素
+    </div>
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+</body>
+</html>

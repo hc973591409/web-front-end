@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>鼠标的移入移出事件</title>
+    <style>
+        div{
+                width: 200px;
+                height: 200px;
+                margin: 50px auto ;
+                border: 2px solid #000;
+                background: #ddd;
+                text-align: center;
+                line-height: 200px;
+            }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            // $('div').mouseenter(function(){
+            //     // 鼠标进入停止所有动画，再开始新的动画
+            //     $(this).stop().animate({marginTop:100});
+            // });
+            // $('div').mouseleave(function(){
+            //     // 鼠标退出停止所有动画，再开始新的动画
+            //     $(this).stop().animate({marginTop:50});
+            // });
+            // 通过hover简写，格式 hover(func,func2)
+            $('div').hover(function(){
+                $(this).stop().animate({marginTop:100});
+            },function(){
+                $(this).stop().animate({marginTop:50});
+            });
+            
+        })
+    </script>
+</head>
+<body>
+    <div>12</div>
+</body>
+</html>

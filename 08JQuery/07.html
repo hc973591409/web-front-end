@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对选择集进行函数过滤</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <style>
+        .myClass{
+            background: gold;
+        }
+    </style>
+    <script>
+    //$('div').has('p'); // 选择包含p元素的div元素
+    //$('div').not('.myClass'); //选择class不等于myClass的div元素
+    //$('div').filter('.myClass'); //选择class等于myClass的div元素
+    //$('div').first(); //选择第1个div元素
+    //$('div').eq(5); //选择第6个div元素
+        $(function () {
+            $('div').has('p').css({fontSize:'30px'});
+            // 注意选择的时候要带. 设置的时候不能带.
+            $('div').not('.myClass').addClass('myClass');
+            $('div').first().css({color:'#fff'});
+            $('li').eq(6).css({fontSize:'20px'});
+
+        })
+  
+    </script>
+</head>
+<body>
+    <div><p>div中有p</p></div>
+    <div class="myClass">div中no p</div>
+
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+   
+</body>
+</html>

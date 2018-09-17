@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对选择集进行修饰过滤(类似CSS伪类)</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+    // $('#ul1 li:first') //选择id为ul1元素下的第一个li
+    // $('#ul1 li:odd') //选择id为ul1元素下的li的奇数行
+    // $('#ul1 li:eq(2)') //选择id为ul1元素下的第3个li
+    // $('#ul1 li:gt(2)') // 选择id为ul1元素下的前三个之后的li
+    // $('#myForm :input') // 选择表单中的input元素
+    // $('div:visible') //选择可见的div元素
+    $(function () { 
+        // $('ul li:first').css({background:'gold'});
+        // 奇数行gold，偶数行red
+        // $('ul li:odd').css({background:'gold'});
+        // $('ul li:even').css({background:'red'});
+        // 单独设置索引值为2的对象
+        $('ul li:eq(2)').css({fontSize:'20px'});
+     })
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li>11<span>12123</span></li>
+        <li>22<span>12123</span></li>
+        <li>33<span>12123</span></li>
+        <li>44<span>12123</span></li>
+        <li>55<span>12123</span></li>
+        <li>66<span>12123</span></li>
+        <li>77<span>12123</span></li>
+        <li>88<span>12123</span></li>
+    </ul>
+</body>
+</html>

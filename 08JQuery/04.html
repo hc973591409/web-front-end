@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery做选项卡</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <style>
+        #btns input{
+            height: 40px;
+            width: 80px;
+            background: #ddd;
+            border: none;
+        }
+        #btns .cur{
+            background: gold;
+        }
+        #content div{
+            width: 500px;
+            height: 500px;
+            font: 30px/500px 'Monoca';
+            background:gold;
+            display: none;
+            text-align: center;
+        }
+        #content .active{
+            display: block;
+        }
+
+
+    
+    </style>
+    <script>
+        $(function () {
+            // #btns input用层级选择器选择input，谁按下就是this指针就是谁的对象
+            $('#btns input').click(function () {
+                // $(this).index()存放按下的索引值
+                // alert($(this).index())
+                // this按下的时候增加类属性，兄弟元素移除属性
+                $(this).addClass('cur').siblings().removeClass('cur');
+                // eq就是选择集对应索引的对象
+                $('#content div').eq($(this).index()).addClass('active').siblings().removeClass('active')
+            });
+        })
+        
+    </script>
+</head>
+<body>
+    <div id = 'btns'>
+        <input type="button" value="按钮1" class="cur">
+        <input type="button" value="按钮2">
+        <input type="button" value="按钮3">
+    </div>
+    <div id = 'content'>
+        <div class="active">文字内容一</div>
+        <div>文字内容而</div>
+        <div>文字内容三</div>
+    </div>
+</body>
+</html>

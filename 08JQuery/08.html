@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选择集转移</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <style>
+        .myClass{
+            background: gold;
+        }
+    </style>
+    <script>
+    // $('div').prev('p'); //选择div元素前面的第一个p元素
+    // $('div').next('p'); //选择div元素后面的第一个p元素
+    // $('div').closest('form'); //选择离div最近的那个form父元素
+    // $('div').parent(); //选择div的父元素
+    // $('div').children(); //选择div的所有子元素
+    // $('div').siblings(); //选择div的同级元素
+    // $('div').find('.myClass'); //选择div内的class等于myClass的元素
+    $(function () {
+        $('div').prev('p').css({fontSize:'30px'});
+        $('#div1').next('p').css({color:'red'});
+        $('#div1').closest('form').css({fontSize:'30px'});
+
+    })
+    
+    </script>
+</head>
+<body>
+   
+    <p>pppppppppppppw3erwerpwrtewppppppppppppppppppp</p>
+    <p>ppppppppppppppppppppppppppppppppp</p>
+    <form action="">
+        <input type="checkbox" name="" id="">hello
+        <div id='div1'>vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv</div>
+    </form>
+    
+    <p>nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn</p>
+    <div>11111111111111111111111111</div>
+    <p>nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn</p>
+    <div>11111111111111111111111111</div>
+    <p>nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn</p>
+    <div>11111111111111111111111111</div>
+    <form action="">
+        <input type="checkbox" name="" id="">world
+    </form>
+    <div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+
+</body>
+</html>
